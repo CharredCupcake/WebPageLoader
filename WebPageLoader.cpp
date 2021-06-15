@@ -15,24 +15,6 @@ void GetInputFile()
 	input.append(".TXT");
 }
 
-size_t GetCount()
-{
-	do
-	{
-		inStream.open(input.c_str());
-		std::cout << "Attempting to open " << input.c_str() << " ...\n";
-	} while (!inStream.is_open());
-	size_t result = 0;
-	std::string currentLine;
-	while (!inStream.eof())
-	{
-		inStream >> currentLine;
-		result++;
-	}
-	inStream.close();
-	return result;
-}
-
 void GetLinks()
 {
 	do
